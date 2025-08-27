@@ -1,58 +1,61 @@
-*{
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-}
-body {
-  font-family: Arial, sans-serif;
-  background: #f0f2f5;
-  margin: 0;
-  padding: 0;
-    display: flex;
-  justify-content: center;
-  min-height: 100vh;
-  align-items: center;
-}
 
+.img-fluid{
+  width: 100%;
+  height: 250px;
+}
+.content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
 .container {
   padding: 30px;
   max-width: 600px;
-  background: #fff;
+  background: var(--color-container-bg);
   border-radius: 8px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   height: min-content;
+  width: 80vw;
 }
 
 h1 {
-  text-align: center;
-  color: #333;
+  color: var(--color-heading);;
 }
 
 .form {
-  display: flex;
+  display: grid;
   gap: 10px;
-  margin-bottom: 20px;
+  gap: 2;
+  margin: 20px 0px;
+}
+
+.strong{
+  font-weight: bold;
+  font-size: medium;
+  color: var(--color-heading);;
 }
 
 input[type="text"] {
   flex: 1;
   padding: 10px;
   font-size: 16px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--color-border);
   border-radius: 4px;
 }
 
 button {
   padding: 10px 20px;
-  background-color: #0066cc;
-  color: white;
+  background-color: var(--color-primary);
+  color: var(--color-divider);
   border: none;
   border-radius: 4px;
+  width: min-content;
   cursor: pointer;
+  transition: color 0.6s ease
 }
 
 button:hover {
-  background-color: #005bb5;
+  background-color: var(--color-primary-dark);
 }
 
 ul {
@@ -62,10 +65,10 @@ ul {
 
 li {
   padding: 8px 0;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--color-border);
 }
 
 a {
-  color: #0066cc;
   text-decoration: none;
 }
+

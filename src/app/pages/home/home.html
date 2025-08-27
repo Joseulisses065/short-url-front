@@ -6,23 +6,17 @@
   <title>Encurtador de URL</title>
 </head>
 <body>
-  <div class="container">
+  <div class="content">
+ <div class="container">
     <h1>Encurtador de URL</h1>
+    <p>Não precisa de credenciais</p>
     <div class="form">
+      <label for="urlInput" class="strong">Cole seu link aqui!</label>
       <input type="text" id="urlInput" placeholder="Cole a URL aqui" [formControl]="formShort" />
       <button (click)="encurtarUrl()">Encurtar</button>
     </div>
-    @if (shortUrls.length>0) {
-      <ul id="listaEncurtados">
-      @for (shortUrl of shortUrls ; track shortUrl.id) {
-        <li>
-          <a href="http://localhost:4200/short/{{ shortUrl.shortCode }}" target="_blank">http://localhost:4200/short/{{ shortUrl.shortCode }}</a>
-        </li>
-      }
-    </ul>
-    } @else{
-      <p>Nenhuma URL encurtada encontrada.</p>
-    }
+  </div>
+
   </div>
 
 </body>
