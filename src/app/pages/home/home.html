@@ -9,8 +9,8 @@
   <div class="container">
     <h1>Encurtador de URL</h1>
     <div class="form">
-      <input type="text" id="urlInput" placeholder="Cole a URL aqui" />
-      <button onclick="encurtarURL()">Encurtar</button>
+      <input type="text" id="urlInput" placeholder="Cole a URL aqui" [formControl]="formShort" />
+      <button (click)="encurtarUrl()">Encurtar</button>
     </div>
     @if (shortUrls.length>0) {
       <ul id="listaEncurtados">

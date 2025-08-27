@@ -1,5 +1,5 @@
-export interface ShortUrl{
-  id: string;
-  originalUrl: string;
-  shortCode: string;
+export class ShortUrl{
+  id: string = '';
+  originalUrl: string = '';
+  shortCode: string = '';
 }

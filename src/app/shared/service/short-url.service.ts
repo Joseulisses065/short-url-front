@@ -8,6 +8,7 @@ import { ShortUrl } from '../../core/model/shortUrl';
   providedIn: 'root'
 })
 export class ShortUrlService {
+
   API_URL = environment.apiUrl;
   constructor(private http: HttpClient) {
 
@@ -21,4 +22,7 @@ export class ShortUrlService {
     return this.http.get<ShortUrl>(`${this.API_URL}/shotUrls/findByShortCode/${code}`).pipe(take(1));
   }
 
+   createShort(url: ShortUrl) {
+    return this.http.post<ShortUrl>(`${this.API_URL}/shotUrls`,url).pipe(take(1))
+  }
 }
