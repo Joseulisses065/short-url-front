@@ -2,10 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { ShortUrlService } from '../../shared/service/short-url.service';
 import { ShortUrl } from '../../core/model/shortUrl';
 import { RouterModule } from '@angular/router';
+import { TruncatePipe } from "../../shared/pipes/truncate-pipe";
 
 @Component({
   selector: 'app-links',
-  imports: [RouterModule],
+  imports: [RouterModule, TruncatePipe],
   templateUrl: './links.html',
   styleUrl: './links.scss'
 })

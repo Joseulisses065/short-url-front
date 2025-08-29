@@ -1,16 +1,20 @@
   .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background-color: #1a1a1a;
+      background-color: var(--color-background-shadow);
       padding: 1rem 2rem;
-      color: white;
+      color: var(--color-text-light);
     }
 
     .navbar .logo {
       font-size: 1.5rem;
       font-weight: bold;
-      color: #00cc66;
+      color: var(--color-primary);
       text-decoration: none;
     }
 
@@ -28,7 +32,7 @@
 
     .navbar a {
       text-decoration: none;
-      color: white;
+      color: var(--color-text-light);
       transition: color 0.3s ease;
     }
 

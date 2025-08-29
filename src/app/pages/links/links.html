@@ -1,12 +1,12 @@
 <div class="container">
-    <h1>Meus Links Encurtados</h1>
+    <h1>Meus Links</h1>
     <div class="card-list">
       @if (shortUrls.length>0) {
 @for (short of shortUrls; track $index) {
       <div class="card">
-        <p class="original-url">{{short.originalUrl}}</p>
+        <p class="original-url">{{short.originalUrl | truncate :32}}</p>
         <div class="short-url">
-          <a routerLink="/short/{{short.shortCode}}" target="_blank">http://localhost:4200/short/{{short.shortCode}}</a>
+          <a routerLink="/short/{{short.shortCode}}" target="_blank">http://localhost:4200/short/{{short.shortCode}} </a>
         </div>
         <div class="card-actions">
           <button (click)="copyToClipboard(`http://localhost:4200/short/${short.shortCode}`)">Copiar</button>
